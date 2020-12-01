@@ -1,4 +1,4 @@
 /*
-Package redistore is a session store backend for gorilla/sessions
+Package sessredistore is a session store backend for gorilla/sessions
 */
-package redistore
+package sessredistore
