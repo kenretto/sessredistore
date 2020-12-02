@@ -243,7 +243,7 @@ func (s *RedisStore) save(ctx context.Context, session *sessions.Session) error 
 		age = time.Duration(s.DefaultMaxAge) * time.Second
 	}
 
-	return s.Cmd.SetNX(ctx, s.keyPrefix+session.ID, b, age).Err()
+	return s.Cmd.SetEX(ctx, s.keyPrefix+session.ID, b, age).Err()
 }
 
 // load reads the session from redis.
